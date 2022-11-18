@@ -9,8 +9,13 @@
       Facere, commodi corrupti ipsam neque totam reprehenderit laboriosam
       laborum veniam est quo, repellat saepe impedit labore?
     </p>
+    <article>{{ data }}</article>
   </div>
 </template>
+
+<script lang="ts" setup>
+  const { data } = await useFetch('/api/currency/USD')
+</script>
 
 <style scoped>
   h2 {
